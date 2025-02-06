@@ -1,0 +1,190 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-y: auto; /* Allow scrolling by default */
+}
+
+body.dark {
+  background-color: #121212;
+  color: #f4f4f4;
+}
+
+/* App Container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Keep the card below the navbar */
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #1e1e3a;
+  color: white;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+body.dark .navbar {
+  background-color: #333333;
+}
+
+.navbar-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  padding-left: 20px; /* Add padding to align the title */
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold; /* Make the links bold */
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #00bcd4;
+}
+
+/* Dark Mode Button */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #00bcd4;
+  color: white;
+  font-size: 14px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+  background-color: #0097a7;
+}
+
+/* Form Container */
+.form-container {
+  margin-top: 120px; /* Adjust for the navbar height */
+  padding: 40px 50px;
+  background: white;
+  border-radius: 12px;
+  width: 600px; /* Stretch the card */
+  max-width: 90%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center; /* Center elements horizontally inside the form */
+  text-align: center; /* Align text in the center */
+  margin-left: auto; /* Center the card horizontally */
+  margin-right: auto; /* Center the card horizontally */
+}
+
+body.dark .form-container {
+  background: #2a2a3b;
+}
+
+/* Input Styles */
+.input-field, .file-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.input-field:focus, .file-input:focus {
+  border-color: #00bcd4; /* Highlight border on focus */
+  outline: none;
+}
+
+/* Bold Labels */
+.file-label,
+input::placeholder,
+textarea::placeholder {
+  font-weight: bold; /* Make labels and placeholders bold */
+  color: #555; /* Slightly darker text for contrast */
+}
+
+body.dark .file-label {
+  color: #f4f4f4;
+}
+
+/* File Input Styling */
+.file-input {
+  font-size: 14px;
+  padding: 8px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #333; /* Default text color for file name */
+}
+
+body.dark .file-input {
+  background-color: #2a2a3b; /* Dark background for file input in dark mode */
+  border: 1px solid #444; /* Slightly darker border */
+  color: #f4f4f4; /* Light text color for dark mode */
+}
+
+/* Button */
+.send-button {
+  background-color: #4caf50;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.send-button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+/* Workflow Page */
+.workflow-container {
+  margin-top: 80px;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Media Queries */
+@media (min-width: 1024px) {
+  body {
+      overflow-y: hidden; /* Remove vertical scrolling for larger screens */
+  }
+}
+
+@media (max-width: 1023px) {
+  body {
+      overflow-y: auto; /* Enable scrolling for smaller screens */
+  }
+}
